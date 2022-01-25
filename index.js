@@ -1,13 +1,18 @@
+ async function getLang() {
 
-
-let language = [];
-let a = fetch('https://restcountries.com/v3/all').then((response) => {
+  let language = [];
+  fetch('https://restcountries.com/v3/all').then((response) => {
     return response.json();
-}).then((data) => {
+  }).then((data) => {
     let dtt = data;
     dtt.forEach(element => {
-      language.push(element.languages)
+      if (typeof element.languages === 'object' && element.languages !== null) {
+        language.push(Object.values(element.languages))
+      }
     });
-    console.log(new Set(language.flat()).size);
-}).catch((err) => { console.log(err); });
-
+    let l = language.flat();
+    console.log(new Set(l).size);
+  }).catch((err) => { console.log(err); });
+  
+}
+getLang();

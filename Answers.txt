@@ -1,1 +1,1 @@
-1. There are 250 languages
+There are 155 languages in the api
