@@ -1,19 +1,19 @@
-//  async function getLang() {
-//   let language = [];
-//   fetch('https://restcountries.com/v3/all').then((response) => {
-//     return response.json();
-//   }).then((data) => {
-//     let dtt = data;
-//     dtt.forEach(element => {
-//       if (typeof element.languages === 'object' && element.languages !== null) {
-//         language.push(Object.values(element.languages))
-//       }
-//     });
-//     let totalLang = Array.from(new Set(language.flat()))
-//   }).catch((err) => { console.log(err); });
+ async function getLang() {
+  let language = [];
+  fetch('https://restcountries.com/v3/all').then((response) => {
+    return response.json();
+  }).then((data) => {
+    let dtt = data;
+    dtt.forEach(element => {
+      if (typeof element.languages === 'object' && element.languages !== null) {
+        language.push(Object.values(element.languages))
+      }
+    });
+    let totalLang = Array.from(new Set(language.flat()))
+  }).catch((err) => { console.log(err); });
   
-// }
-// getLang();
+}
+getLang();
 
 function top10LargeCountries() {
   let Area = [];
