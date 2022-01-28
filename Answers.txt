@@ -1,1 +1,4 @@
 There are 155 languages in the api
+
+Explain the difference between find and findIndex ?
+Ans. by using find we can get the value and by using findIndex we get the index of the array.
