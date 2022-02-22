@@ -2,3 +2,10 @@ There are 155 languages in the api
 
 Explain the difference between find and findIndex ?
 Ans. by using find we can get the value and by using findIndex we get the index of the array.
+Q. Explain the difference of var, let and const when we declare a variable ?
+Answer: A variable declared using 'var' can be redefined and even redeclared anywhere throughout its scope. 
+A variable declared using 'let' can be redefined within its scope but cannot be re-declared within its scope. ... 
+A variable declared using 'const' cannot be redefined or re-declared within its scope.
+
+Q. If you like to filter out one object element in an array which method do you like to use: filter or find ? Explain?
+Answer: I will use filter. Its easy to use, it is more readable and less complex.
